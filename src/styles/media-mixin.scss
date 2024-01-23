@@ -1,0 +1,28 @@
+$screen-sm-limit:576px;
+$screen-md-limit: 900px;
+$screen-lg-limit: 1024px;
+$screen-xl-limit: 1440px;
+
+@mixin apply-at-sm-size {
+    @media(min-width: $screen-sm-limit) {
+        @content;
+    }
+}
+
+@mixin apply-at-md-size {
+    @media(min-width: $screen-md-limit) {
+        @content;
+    }
+}
+
+@mixin apply-at-lg-size {
+    @media(min-width: $screen-lg-limit) {
+        @content;
+    }
+}
+
+@mixin apply-at-xl-size {
+    @media(min-width: $screen-xl-limit) {
+        @content;
+    }
+}

@@ -1,0 +1,333 @@
+@import '../../styles/base.scss';
+
+.formbox-container {
+    position: relative;
+
+    @include apply-at-md-size {
+        position: static;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.formbox-wrapper {
+    @include apply-at-md-size {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background-color: transparent;
+        transform: translateX(0);
+        padding: 0 25px;
+    }
+
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    background-color: $White;
+    margin: 0px auto;
+    padding: 25px 25px;
+    border-radius: 15px;
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    h3 {
+        color: $Marineblue;
+    }
+
+    h4 {
+        font-weight: 400;
+        margin-top: 5px;
+        color: $Coolgray;
+    }
+
+    h1,
+    label {
+        color: $Marineblue;
+    }
+
+    h2,
+    ::placeholder {
+        color: $Coolgray;
+    }
+
+    h2 {
+        padding-top: 10px;
+    }
+
+    .content-wrapper {
+        margin-top: 20px;
+
+        .input-box {
+            margin: 15px 0px;
+
+            input {
+                width: 100%;
+                padding: 15px;
+                border-radius: 5px;
+                border: 1px solid $Coolgray;
+                margin-top: 5px;
+            }
+
+            label {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .plan-wrapper {
+        margin-top: 20px;
+
+        .plan-rows {
+            @include apply-at-md-size {
+                display: flex;
+                gap: 2%;
+            }
+
+            .plan-item {
+                background-clip: padding-box;
+                width: 100%;
+                text-align: start;
+                padding: 25px;
+                border: 1px solid $Coolgray;
+                border-radius: 15px;
+                background-color: transparent;
+                margin: 15px 0px;
+                @include apply-at-md-size {
+                    padding: 25px 0px 25px 15px;
+                }
+            }
+
+            .plan-item-selected {
+                background-clip: padding-box;
+                width: 100%;
+                text-align: start;
+                padding: 25px;
+                border: 1px solid $Coolgray;
+                border-radius: 15px;
+                background-color: $Lightblue;
+                margin: 15px 0px;
+                @include apply-at-md-size {
+                    padding: 25px 0px 25px 15px;
+                }
+            }
+
+            .plan-item:hover {
+                background-color: $Magnolia;
+            }
+
+            .inside-button {
+                @include apply-at-md-size {
+                    display: block;
+                }
+
+                display: flex;
+                align-items: center;
+            }
+
+            .button-info {
+                margin-left: 20px;
+
+                @include apply-at-md-size {
+                    margin-left: 0px;
+                    margin-top: 30px;
+                }
+            }
+        }
+
+
+        .plantype-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background-color: $Magnolia;
+            padding: 15px 0;
+            align-items: center;
+
+            @include apply-at-md-size {
+                margin-top: 20px;
+            }
+
+            .switch-box {
+                margin: 0px 20px;
+            }
+        }
+    }
+
+    .addon-wrapper {
+        margin-top: 20px;
+
+        .row-wrapper {
+            margin: 10px 0px;
+        }
+
+        .row-content {
+            border: 1px solid $Coolgray;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 15px;
+            padding: 25px;
+
+            .checkbox-box {
+                display: flex;
+
+                .row-info {
+                    margin-left: 20px;
+                }
+
+                .row-price {
+                    color: $Purplishblue;
+                }
+            }
+        }
+    }
+
+    .finish-container {
+        background-color: $Magnolia;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .total {
+        padding: 15px;
+    }
+
+    .thankyou-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 15px;
+
+        h4 {
+            margin-top: 15px;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+    }
+}
+
+.bottombar {
+    @include apply-at-md-size {
+        position: static;
+        background-color: transparent;
+    }
+
+    position: absolute;
+    bottom: 0px;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    background-color: $White;
+}
+
+.bottombar-end {
+    @include apply-at-md-size {
+        position: static;
+        background-color: transparent;
+    }
+
+    position: absolute;
+    bottom: 0px;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0px 15px;
+    background-color: $White;
+}
+
+.change-button{
+    padding: 0;
+    background-color: transparent;
+}
+
+.back-button {
+    background-color: transparent;
+    color: $Coolgray;
+}
+
+.next-button {
+    font-family: "Ubuntu", sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: $Marineblue;
+    color: $White;
+}
+
+.display-none {
+    display: none;
+}
+
+// Switch CSS
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $Marineblue;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: $Marineblue;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}

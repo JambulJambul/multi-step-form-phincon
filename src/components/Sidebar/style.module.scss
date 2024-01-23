@@ -1,0 +1,80 @@
+@import '../../styles/base.scss';
+
+.sidebar-wrapper {
+    @include apply-at-md-size {
+        height: 100%;
+        background-image: url("../../assets/bg-sidebar-desktop.svg");
+        border-radius: 15px;
+    }
+
+    background-image: url("../../assets/bg-sidebar-mobile.svg");
+    width: 100%;
+    height: 25vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    h5{
+        color: $Lightgray
+    }
+}
+
+.sidebar-content {
+    @include apply-at-md-size {
+        display: block;
+    }
+
+    color: $White;
+    display: flex;
+    margin-top: 40px;
+    height: min-content;
+    font-weight: 600;
+}
+
+.selected-number {
+    font-size: 16px;
+    border-radius: 100%;
+    background-color: $Pastelblue;
+    border: 2px solid $Pastelblue;
+    color: $Marineblue;
+    width: 30px;
+    height: 30px;
+    padding-top: 4px;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.number-row {
+    @include apply-at-md-size {
+        display: flex;
+        margin: 20px 0px;
+        width: 100%;
+    }
+}
+
+.sidebar-numbers {
+    font-size: 16px;
+    border-radius: 100%;
+    border: 2px solid $White;
+    width: 30px;
+    height: 30px;
+    padding-top: 4px;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.number-info {
+    display: none;
+
+    @include apply-at-md-size {
+        display: block;
+        h5 {
+            margin: 0;
+        }
+
+        h4 {
+            margin: 0;
+        }
+    }
+
+}

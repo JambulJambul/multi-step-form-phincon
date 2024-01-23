@@ -1,0 +1,47 @@
+@import '../../styles/base.scss';
+
+.bottombar-container {
+    @include apply-at-md-size {
+        position: static;
+        background-color: transparent;
+    }
+    position: absolute;
+    bottom: 0px;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    background-color: $White;
+}
+
+.bottombar-container-next-only {
+    @include apply-at-md-size {
+        position: static;
+        background-color: transparent;
+    }
+    position: absolute;
+    bottom: 0px;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0px 15px;
+    background-color: $White;
+}
+
+.back-button{
+    background-color: transparent;
+    color: $Coolgray;
+}
+
+.next-button {
+    font-family: "Ubuntu", sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: $Marineblue;
+    color: $White;
+}
